@@ -1,0 +1,52 @@
+# --- Secrets ---------------------------------------------------------------
+.env
+.env.local
+*.pem
+*.key
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Virtual envs ----------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Test / coverage -------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# --- Project-specific runtime ---------------------------------------------
+.fracture_agent_cache/
+agentic_simulations/*/
+!agentic_simulations/.gitkeep
+
+# --- Editor / OS -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Claude Code / agent harness traces -----------------------------------
+.claude/
+.claude.local/
+CLAUDE.md
