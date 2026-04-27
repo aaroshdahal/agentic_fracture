@@ -26,18 +26,7 @@ run.
 Phase-field fracture is one of the most expressive tools in computational
 mechanics, but writing a correct DOLFINx driver is genuinely hard:
 
-- Plane stress vs plane strain is a one-line decision that is wrong in 40%
-  of student attempts.
-- Material parameters drift between unit systems (`N/m` vs `N/mm`,
-  `tonne/mm³` vs `kg/m³`); a single misplaced factor of 1000 silently kills
-  the run.
-- Pre-cracks have to live either in the mesh or as a Dirichlet pin — get it
-  wrong and the field never breaks.
-- Element size, regularisation length, and time step are all coupled
-  through the Irwin characteristic length; off by 2× and the energy
-  release rate is meaningless.
-
-`agentic_fracture` takes a guess at every one of these decisions, writes
+`agentic_fracture` takes a guess at every one of the decisions, writes
 the assumption down so you can audit it, runs the simulation, and tells you
 whether the result is physically plausible.
 
